@@ -4,13 +4,20 @@ Pi Audio Desktop Client
 
 @author Justin Stander (justin.stander@gmail.com)
 -->
-<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
 					   xmlns:s="library://ns.adobe.com/flex/spark"
 					   xmlns:piaudio="com.stander.piaudio.*">
 	
 	<fx:Style source="desktop.css"/>
 	
+	<fx:Script>
+		<![CDATA[
+			import com.stander.piaudio.Model;
+		]]>
+	</fx:Script>
+	
 	<piaudio:View width="100%"
-				  height="100%" />
+				  height="100%"
+				  playIcon="{Model.getInstance().playIcon}"/>
 	
 </s:WindowedApplication>
